@@ -51,12 +51,12 @@ def people(state, city, dist):
 if __name__ == '__main__':
     fp = open('gas.csv', 'w')
     out = csv.writer(fp, lineterminator='\n')
-    header = 'S.No,Consumer No,Consumer Name,Address,Refills,Before,After-Subsidized,After-Non-Subsidized,Subsidy Rs'.split(',')
+    header = 'State,City,Dist,S.No,Consumer No,Consumer Name,Address,Refills,Before,After-Subsidized,After-Non-Subsidized,Subsidy Rs'.split(',')
     out.writerow(header)
     for state_id, state_name in states():
         for city_id, city_name in cities(state_id):
             for dist_id, dist_name in distributors(state_id, city_id):
-                print '\n', state_name, city_name, dist_id
+                print state_name, city_name, dist_id
                 for row in people(state_id, city_id, dist_id):
-                    out.writerow(row)
+                    out.writerow([state_id, city_id, dist_id] + row)
                     fp.flush()
