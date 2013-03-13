@@ -1,5 +1,4 @@
 import os
-import sys
 import csv
 import urllib
 import hashlib
@@ -59,6 +58,5 @@ if __name__ == '__main__':
             for dist_id, dist_name in distributors(state_id, city_id):
                 print '\n', state_name, city_name, dist_id
                 for row in people(state_id, city_id, dist_id):
-                    sys.stdout.write('.')
                     out.writerow(row)
                     fp.flush()
