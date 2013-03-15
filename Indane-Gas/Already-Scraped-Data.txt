@@ -1,0 +1,56 @@
+LPG Consumer Data of Indane Gas 
+-------------------------------
+
+Below you will find links to zip files (one for each state). Each zip has
+CSV files for one state - one CSV for each city within the state.
+
+Total: 444 files, 80MB, ~ 5M records from 5 states. See the break up below.
+
+The file naming convention: indane-csv/<state>-<city>.csv. Both state and
+city numbers used in the filename are our numbers (1 to X).
+
+The data within however shows the state and city numbers used by
+Indane database. The from and to are begin and end dates for the
+(cumulative) consumption. We dont have exact dates when the
+consumption happened. They have it and it is scrapable from the site.
+It is very important that we grab it).
+
+$ head indane-csv/1-22.csv
+state   city    distributor     from    to      name    address refills
+2169    1516    125482  01/06/2011      29/02/2012      A. PRAVEEN
+KUMARA1-873 BDL TOWNSHIP    4
+2169    1516    125482  01/06/2011      29/02/2012      A. RAMULU
+ H.NO. 3-35      8
+2169    1516    125482  01/06/2011      29/02/2012      A. SRINIVAS
+ H.NO. 3-57      9
+2169    1516    125482  01/06/2011      29/02/2012      A. TEJESWARA
+RAOA-596 BDL TOWNSHIP      4
+2169    1516    125482  01/06/2011      29/02/2012      A. VANISRI
+ A-141. BDL TOWNSHIP     4
+2169    1516    125482  01/06/2011      29/02/2012      A.S.REDDY
+ A-462.BDL TOWNSHIP      2
+2169    1516    125482  01/06/2011      29/02/2012      A.TULASIDAS
+ A-222. BDL TOWNSHIP     1
+2169    1516    125482  01/06/2011      29/02/2012      A.YADAGIRI
+ A-522. BDL TOWNSHIP, BDL TOWNSHIP       4
+2169    1516    125482  01/06/2011      29/02/2012      ABDUL GAFFAR
+ H.NO.5-32, BHANUR.      5
+
+----
+Andhra Pradesh (44MB, 2.64M)
+https://s3.amazonaws.com/lpgdata/1.zip
+
+Arunachal Pradesh (820K, 68K)
+https://s3.amazonaws.com/lpgdata/2.zip 
+
+Assam (18MB, 1.28M)
+https://s3.amazonaws.com/lpgdata/3.zip 
+
+Bihar (12MB, 750K)
+https://s3.amazonaws.com/lpgdata/4.zip
+
+Chattishgarh (5MB, 272K)
+https://s3.amazonaws.com/lpgdata/5.zip
+
+Goa (188MB, 11K)
+https://s3.amazonaws.com/lpgdata/7.zip
